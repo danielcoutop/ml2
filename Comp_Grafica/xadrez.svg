@@ -5,6 +5,11 @@
     :root {
       --cor_1: black;
       --cor_2: white;
+      --cor_3: blue;
+      --cor_4: red;
+      --cor_5: gold;
+      --cor_6: gold;
+    
     }
   </style>
   <!-- Tabuleiro -->
@@ -73,33 +78,71 @@
   <rect x="448" y="384" width="64" height="64" fill="var(--cor_1)" />
   <rect x="448" y="448" width="64" height="64" fill="var(--cor_2)" />
 
-  <!-- símbolo da linha -->
-  <symbol id="linha" viewBox="0 0 64 64">
-    <line x1="0" y1="0" x2="10" y2="0" />
-  </symbol>
-
   <!-- Peão -->
 <symbol id="peao" viewBox="0 0 64 64">
-      <use href="#linha" x="20" y="51" transform = "translate(28.5,51) rotate(-60) scale(1) translate(-28.5,-51)"/>
+    <!-- boneco -->
+    <g transform="translate(32,32)">
+    <!-- cabeça -->
+    <circle cx="0" cy="-15" r="6"/>
+    
+    <!-- corpo -->
+    <line x1="0" y1="-10" x2="0" y2="10" stroke-width = "2"/>
+    
+    <!-- braços -->
+    <line x1="0" y1="-5" x2="-12" y2="0" stroke-width = "2"/>
+    <line x1="0" y1="-5" x2="12" y2="3" stroke-width = "2"/>
+    
+    <!-- pernas -->
+    <line x1="0" y1="10" x2="-5" y2="27" stroke-width = "2"/>
+    <line x1="0" y1="10" x2="5" y2="27" stroke-width = "2"/>
+
+    <!-- lança -->
+    <g>
+      <line x1="12" y1="27" x2="12" y2="-12" stroke-width = "2"/>
+      <polygon points="9,-12 15,-12 12,-17"/>
+    </g>
+  </g>
+  <g transform="translate(32,32)">
+  <!-- escudo -->
+    <path d="
+      M -12 -9
+      L-2 -6
+      L -5 6
+      L-12 10
+      L-19 6
+      L-22 -6
+      Z
+     "
+    fill=""
+    stroke="var(--cor_5)"
+    stroke-width="1"/>
+    </g>
   </symbol>
 
+<!-- Torre-->
 
-  <use href="#peao" x="0" y="384" width="64" height="64" stroke="#EAE2CD"/>
-  <use href="#peao" x="64" y="384" width="64" height="64" stroke="#EAE2CD" />
-  <use href="#peao" x="128" y="384" width="64" height="64" stroke="#EAE2CD" />
-  <use href="#peao" x="192" y="384" width="64" height="64" stroke="#EAE2CD"/>
-  <use href="#peao" x="256" y="384" width="64" height="64" stroke="#EAE2CD" />
-  <use href="#peao" x="320" y="384" width="64" height="64" stroke="#EAE2CD" />
-  <use href="#peao" x="384" y="384" width="64" height="64" stroke="#EAE2CD"/>
-  <use href="#peao" x="448" y="384" width="64" height="64" stroke="#EAE2CD" />
-  <use href="#peao" x="0" y="64" width="64" height="64" stroke="#5C6264"/>
-  <use href="#peao" x="64" y="64" width="64" height="64" stroke="#5C6264" />
-  <use href="#peao" x="128" y="64" width="64" height="64" stroke="#5C6264" />
-  <use href="#peao" x="192" y="64" width="64" height="64" stroke="#5C6264"/>
-  <use href="#peao" x="256" y="64" width="64" height="64" stroke="#5C6264" />
-  <use href="#peao" x="320" y="64" width="64" height="64" stroke="#5C6264" />
-  <use href="#peao" x="384" y="64" width="64" height="64" stroke="#5C6264"/>
-  <use href="#peao" x="448" y="64" width="64" height="64" stroke="#5C6264" />
+
+
+
+
+
+
+  <use href="#peao" x="0" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)"/>
+  <use href="#peao" x="64" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)" />
+  <use href="#peao" x="128" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)" />
+  <use href="#peao" x="192" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)"/>
+  <use href="#peao" x="256" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)" />
+  <use href="#peao" x="320" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)" />
+  <use href="#peao" x="384" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)"/>
+  <use href="#peao" x="448" y="384" width="64" height="64" stroke="var(--cor_3)" fill = "var(--cor_3)" />
+  <use href="#peao" x="0" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)"/>
+  <use href="#peao" x="64" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)" />
+  <use href="#peao" x="128" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)" />
+  <use href="#peao" x="192" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)"/>
+  <use href="#peao" x="256" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)" />
+  <use href="#peao" x="320" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)" />
+  <use href="#peao" x="384" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)"/>
+  <use href="#peao" x="448" y="64" width="64" height="64" stroke="var(--cor_4)" fill = "var(--cor_4)" />
     
 
 
